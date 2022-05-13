@@ -14,9 +14,9 @@ export default defineConfig({
       tags: {
         callout: {
           render: 'Callout',
-          attributes: {}
-        }
-      }
+          attributes: {},
+        },
+      },
     }),
   ],
 })
