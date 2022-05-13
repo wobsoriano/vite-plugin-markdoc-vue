@@ -1,4 +1,4 @@
-# vite-plugin-markdoc
+# vite-plugin-markdoc-vue
 
 A plugin that enables you to import [Markdoc](https://markdoc.io/) extended markdowns as Vue components.
 
