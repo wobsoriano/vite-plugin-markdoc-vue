@@ -2,7 +2,7 @@
   "name": "vite-plugin-markdoc-vue",
   "version": "0.0.0",
   "packageManager": "pnpm@7.0.0",
-  "description": "Render Markdoc supported markdowns as Vue components.",
+  "description": "Render Markdoc markdowns as Vue components.",
   "publishConfig": {
     "access": "public"
   },

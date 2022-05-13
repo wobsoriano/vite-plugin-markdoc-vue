@@ -1,48 +1,62 @@
 # vite-plugin-markdoc
 
-[![Build Size](https://img.shields.io/bundlephobia/minzip/vite-plugin-markdoc?label=bundle%20size&style=flat&colorA=000000&colorB=000000)](https://bundlephobia.com/result?p=vite-plugin-markdoc)
-[![Version](https://img.shields.io/npm/v/vite-plugin-markdoc?style=flat&colorA=000000&colorB=000000)](https://www.npmjs.com/package/vite-plugin-markdoc)
-
-A plugin that enables you to import markdown files on your Vite projects. It uses [stripe's](https://stripe.com/) [Markdoc](https://markdoc.io/) to parse and transform `.md` files.
+A plugin that enables you to import [Markdoc](https://markdoc.io/) extended markdowns as Vue components.
 
 ## Installation
 
+Install
+
 ```bash
-pnpm add vite-plugin-markdoc -D
+pnpm add vite-plugin-markdoc-vue -D
 ```
 
-## Usage
+### TypeScript Shum
+
+where needed:
 
 ```ts
-// vite.config.ts
+declare module '*.vue' {
+  import type { ComponentOptions } from 'vue'
+  const Component: ComponentOptions
+  export default Component
+}
+
+declare module '*.md' {
+  import type { ComponentOptions } from 'vue'
+  const Component: ComponentOptions
+  export default Component
+}
+```
+
+then add the following to `vite.config.ts`
+
+```ts
 import { defineConfig } from 'vite'
-import markdoc from 'vite-plugin-markdoc'
+import Vue from '@vitejs/plugin-vue'
+import MarkdocVue from 'vite-plugin-markdoc'
 
 export default defineConfig({
-  ...
-  plugins: [markdoc()]
-});
+  plugins: [
+    Vue({
+      include: [/\.vue$/, /\.md$/], // <--
+    }),
+    MarkdocVue(),
+  ]
+})
 ```
 
-```md
----
-title: What is Markdoc?
----
+And import it as a normal Vue component.
 
-# {% $markdoc.frontmatter.title %} {% #overview %}
+## Import Markdown as Vue components
 
-Markdoc is a Markdown-based syntax and toolchain for creating custom documentation sites. Stripe created Markdoc to power [our public docs](http://stripe.com/docs).
+```html
+<script setup>
+import Content from './content.md'
+</script>
 
-{% callout type="check" %}
-Markdoc is open-source—check out its [source](http://github.com/markdoc/markdoc) to see how it works.
-{% /callout %}
-```
-
-```ts
-import Markdoc from '@markdoc/markdoc'
-import content from './contents/doc.md'
-
-const html = Markdoc.renderers.html(content)
+<template>
+  <Content />
+</template>
 ```
 
 ## Configuration
@@ -51,29 +65,18 @@ The plugin accepts an optional [`Markdoc.transform`](https://markdoc.io/docs/syn
 
 ```ts
 // vite.config.ts
-import { defineConfig } from 'vite'
-import markdoc from 'vite-plugin-markdoc'
-
 export default defineConfig({
-  plugins: [markdoc({
-    nodes: {...},
-    tags: {...},
-    ...
-  })]
-});
+  plugins: [
+    Vue({
+      include: [/\.vue$/, /\.md$/], // <--
+    }),
+    MarkdocVue({
+      nodes: {},
+      tags: {}
+    }),
+  ]
+})
 ```
-
-## TypeScript Shim
-
-```ts
-declare module '*.md' {
-  import type { RenderableTreeNode } from '@markdoc/markdoc'
-  const Node: RenderableTreeNode
-  export default Node
-}
-```
-
-Save as `vite.d.ts` for instance.
 
 ## License
 
