@@ -7,13 +7,13 @@ test('Transform markdown to Vue component', () => {
   const Callout = defineComponent({
     setup(_props, { slots }) {
       return () => h('div', { class: 'callout' }, slots)
-    }
+    },
   })
 
   const App = defineComponent({
     setup() {
       return () => h(Content, {
-        components: { Callout }
+        components: { Callout },
       })
     },
   })

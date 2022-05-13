@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@antfu/eslint-config': ^0.23.0
   '@antfu/ni': ^0.16.2
+  '@markdoc/markdoc': ^0.1.2
   '@vitejs/plugin-vue': ^2.3.3
   '@vue/test-utils': 2.0.0-rc.21
   bumpp: ^7.1.1
@@ -18,8 +19,9 @@ specifiers:
   vue-markdoc: ^0.1.2
 
 dependencies:
+  '@markdoc/markdoc': 0.1.2
   vite-plugin-markdoc: 0.1.4
-  vue-markdoc: 0.1.2_vue@3.2.33
+  vue-markdoc: 0.1.2_shwdqjf3ls2bqkakoys7gwttqq
 
 devDependencies:
   '@antfu/eslint-config': 0.23.0_hcfsmds2fshutdssjqluwm76uu
@@ -3363,12 +3365,13 @@ packages:
       - supports-color
     dev: true
 
-  /vue-markdoc/0.1.2_vue@3.2.33:
+  /vue-markdoc/0.1.2_shwdqjf3ls2bqkakoys7gwttqq:
     resolution: {integrity: sha512-MvRotqMrDOHa096PoV2PY7u4yD2LQ+pv0CV7HvKz6DOWjqdblZAM3dCAR4HxSR6LAqiXb4YypQa3iY3V7scuXA==}
     peerDependencies:
       '@markdoc/markdoc': '*'
       vue: '>=3.2.0'
     dependencies:
+      '@markdoc/markdoc': 0.1.2
       vue: 3.2.33
     dev: false
 

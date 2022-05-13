@@ -37,6 +37,7 @@
     "vite": "^2.0.0"
   },
   "dependencies": {
+    "@markdoc/markdoc": "^0.1.2",
     "vite-plugin-markdoc": "^0.1.4",
     "vue-markdoc": "^0.1.2"
   },
