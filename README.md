@@ -4,16 +4,10 @@ A plugin that enables you to import [Markdoc](https://markdoc.io/) extended mark
 
 ## Installation
 
-Install the Vue renderer
+Install the renderer and plugin:
 
 ```bash
-pnpm add vue-markdoc
-```
-
-Then install the plugin
-
-```bash
-pnpm add vite-plugin-markdoc-vue -D
+pnpm add vue-markdoc vite-plugin-markdoc-vue -D
 ```
 
 ### TypeScript Shim
