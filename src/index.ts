@@ -1,6 +1,7 @@
 import type { Plugin } from 'vite'
-import type { Options } from 'vite-plugin-markdoc'
-import { transformMarkdown } from 'vite-plugin-markdoc'
+import Markdoc from '@markdoc/markdoc'
+
+export type Options = Parameters<typeof Markdoc.transform>['1']
 
 const mdExtRE = /\.(md)$/i
 
@@ -12,7 +13,8 @@ export default function plugin(options?: Options): Plugin {
       if (!mdExtRE.test(id))
         return null
 
-      const content = transformMarkdown(code, options)
+      const ast = Markdoc.parse(code)
+      const content = Markdoc.transform(ast, options)
       const contentStr = JSON.stringify(content)
 
       const sfc = `
