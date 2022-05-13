@@ -20,11 +20,11 @@ export default function plugin(options?: Options): Plugin {
         import VueRenderer from 'vue-markdoc'
     
         const props = defineProps(['components'])
-        const Transformed = VueRenderer(${contentStr}, { components: props.components })
+        const SFC = VueRenderer(${contentStr}, { components: props.components })
         </script>
     
         <template>
-          <Transformed />
+          <SFC />
         </template>
       `
 
