@@ -33,7 +33,7 @@ then add the following to `vite.config.ts`
 ```ts
 import { defineConfig } from 'vite'
 import Vue from '@vitejs/plugin-vue'
-import MarkdocVue from 'vite-plugin-markdoc'
+import MarkdocVue from 'vite-plugin-markdoc-vue'
 
 export default defineConfig({
   plugins: [
