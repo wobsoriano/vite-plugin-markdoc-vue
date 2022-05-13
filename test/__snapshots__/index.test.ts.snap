@@ -1,0 +1,18 @@
+// Vitest Snapshot v1
+
+exports[`Transform markdown to Vue component 1`] = `
+"<article>
+  <h1 id=\\"overview\\">
+    <!---->
+  </h1>
+  <p>Markdoc is a Markdown-based syntax and toolchain for creating custom documentation sites. Stripe created Markdoc to power <a href=\\"http://stripe.com/docs\\">our public docs</a>.</p>
+  <p>Markdoc is open-source—check out its <a href=\\"http://github.com/markdoc/markdoc\\">source</a> to see how it works.</p>
+  <h2>How is Markdoc different?</h2>
+  <p>Markdoc uses a fully declarative approach to composition and flow control, where other solutions… <a href=\\"/docs/overview\\">Read more</a>.</p>
+  <h2>Next steps</h2>
+  <ul>
+    <li><a href=\\"/docs/getting-started\\">Install Markdoc</a></li>
+    <li><a href=\\"/docs/syntax\\">Explore the syntax</a></li>
+  </ul>
+</article>"
+`;
