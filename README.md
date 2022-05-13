@@ -59,6 +59,46 @@ import Content from './content.md'
 </template>
 ```
 
+## Render Vue components
+
+Imported markdown files accepts a `components` object as a `prop`. The `components` object specifies a mapping from your tags and nodes to the corresponding Vue component.
+
+```md
+{% callout %}
+Attention, over here!
+{% /callout %}
+```
+
+```html
+<script setup>
+import Content from './content.md'
+import Callout from './Callout.vue'
+
+const tags = {
+  callout: {
+    render: 'Callout',
+    attributes: {}
+  }
+};
+</script>
+
+<template>
+  <Content :components="{ Callout }" />
+</template>
+```
+
+```html
+<template>
+  <div class="callout">
+    <slot />
+  </div>
+</template>
+
+<style>
+.callout {}
+</style>
+```
+
 ## Configuration
 
 The plugin accepts an optional [`Markdoc.transform`](https://markdoc.io/docs/syntax#config) config:
