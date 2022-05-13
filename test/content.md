@@ -6,7 +6,7 @@ title: What is Markdoc?
 
 Markdoc is a Markdown-based syntax and toolchain for creating custom documentation sites. Stripe created Markdoc to power [our public docs](http://stripe.com/docs).
 
-{% callout type="check" %}
+{% callout %}
 Markdoc is open-source—check out its [source](http://github.com/markdoc/markdoc) to see how it works.
 {% /callout %}
 

@@ -10,6 +10,13 @@ export default defineConfig({
     vue({
       include: [/\.vue$/, /\.md$/],
     }),
-    MarkdocVue(),
+    MarkdocVue({
+      tags: {
+        callout: {
+          render: 'Callout',
+          attributes: {}
+        }
+      }
+    }),
   ],
 })
