@@ -10,7 +10,7 @@ Install
 pnpm add vite-plugin-markdoc-vue -D
 ```
 
-### TypeScript Shum
+### TypeScript Shim
 
 where needed:
 
