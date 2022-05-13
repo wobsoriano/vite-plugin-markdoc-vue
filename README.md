@@ -118,6 +118,11 @@ export default defineConfig({
 })
 ```
 
+## Related
+
+- [vue-markdoc](https://github.com/wobsoriano/vue-markdoc) - Vue renderer for Markdoc
+- [vite-plugin-markdoc](https://github.com/wobsoriano/vite-plugin-markdoc) - Markdoc plugin for Vite
+
 ## License
 
 MIT
