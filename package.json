@@ -20,9 +20,10 @@
   },
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
+  "types": "./index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "index.d.ts"
   ],
   "scripts": {
     "build-fast": "tsup src/index.ts --format cjs,esm",
@@ -30,7 +31,7 @@
     "lint": "eslint .",
     "test": "vitest run",
     "lint:fix": "eslint . --fix",
-    "prepublishOnly": "nr build",
+    "prepublishOnly": "pnpm build-fast",
     "release": "bumpp --commit --push --tag && npm publish"
   },
   "peerDependencies": {
