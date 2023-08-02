@@ -34,15 +34,15 @@
     "release": "bumpp --commit --push --tag && npm publish"
   },
   "peerDependencies": {
-    "vite": "^2.0.0"
+    "@markdoc/markdoc": "^0.3.0"
   },
   "dependencies": {
-    "@markdoc/markdoc": "^0.3.0",
     "vue-markdoc": "^0.3.0"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.40.0",
     "@antfu/ni": "^0.21.5",
+    "@markdoc/markdoc": "^0.3.0",
     "@vitejs/plugin-vue": "^4.2.3",
     "@vue/test-utils": "2.4.1",
     "bumpp": "^9.1.1",
