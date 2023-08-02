@@ -34,7 +34,8 @@
     "release": "bumpp --commit --push --tag && npm publish"
   },
   "peerDependencies": {
-    "@markdoc/markdoc": "^0.3.0"
+    "@markdoc/markdoc": "^0.3.0",
+    "vue": ">=3.2.0"
   },
   "dependencies": {
     "vue-markdoc": "^0.3.0"
